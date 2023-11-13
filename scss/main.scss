@@ -1,0 +1,590 @@
+@import './reset';
+@import './blocks/header';
+@import './blocks/footer';
+
+$green:#3a9c3a;
+$accent:#848a92;
+
+body {
+	width: 100%;
+	height: 100%;
+	color: #14274A;
+}
+
+._container {
+	padding:0 9% 0 9%;
+	@media (max-width:950px) {padding:0 50px 0 50px;}
+	@media (max-width:500px) {padding:0 25px 0 25px;}
+	@media (max-width:380px) {padding:0 10px 0 10px;}
+
+}
+._button1 {
+	color:#fff;
+	background-color: $accent;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	padding:15px 40px;
+	border-radius: 10px;
+	border: none;
+	transition: 0.3s;
+	cursor: pointer;
+	&:hover{
+		transform: scale(1.2);
+		box-shadow: 0 0 30px 0.2px black;
+		background-color: $green;
+	}
+}
+// ---bg images------
+.main-bg__first{
+	background-image:url("../images/bgmask.svg"), url("../images/bas/Photo23-Standardfg.jpeg");
+}
+.main-bg__second{
+	background-image:url("../images/bgmask.svg"), url("../images/spa/IMG_1712-HDR-1.jpeg");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.main-bg__second__block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding:0 50px 0 50px;
+		h2{
+			font-family: Montserrat;
+			color:#fff;
+			font-size: 45px;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-align: center;
+			@media (max-width:950px) {font-size:36px;}
+			@media (max-width:400px) {font-size:24px;}
+		}
+		p{
+			text-align: center;
+			max-width: 1100px;
+			font-family: abode-b;
+			color: #fff;
+			font-size: 25px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			line-height: 120%;
+			margin-top:50px;
+			@media (max-width:950px) {font-size:22px;max-width:800px;}
+			@media (max-width:400px) {font-size:20px;max-width:300px;}
+		}
+	}
+}
+.room-bg{
+	background-image: url("../images/bgmask.svg"),url("../images/IMG_6607.jpeg");
+}
+.facilities-bg{
+	background-image: url("../images/bgmask.svg"),url("../images/Hotel-med.jpeg");
+}
+	
+// -----------HOMEPAGE---------main------------- 
+.main{
+	overflow: hidden;
+}
+.main-container {
+	min-height: 100vh;
+	background-color: #fff;
+	.main-container__content {
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		@media (max-width:1150px) {justify-content:space-around;}
+		.main-faciality__title {
+			font-family: adobe-b;
+			font-size: 25px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			padding:0 0 50px 0;
+			max-width: 1000px;
+			text-align: center;
+			@media (max-width:1150px) {font-size:18px;padding:20px 0 50px 0;}
+		}
+		.main-content__title {
+			font-family: Montserrat;
+			font-size: 30px;
+			font-weight: regular;
+			letter-spacing: 1px;
+			padding:0 0 70px 0;
+			text-align: center;
+			@media (max-width:610px) {font-size: 25px;padding:0 0 10px 0;}
+			@media (max-width:600px) {font-size:22px;}
+			@media (max-width:400px) {font-size:18px;}
+		}
+		.main-content__block {
+			.content-block__card {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				background-color: #fff;
+				@media (max-width:1150px) {flex-wrap: wrap;justify-content:center;}
+				.main-card__text__img{
+					img{
+						max-width: 800px;
+						height: auto;
+						@media (min-width:1720px) {max-width:1200px}
+						@media (max-width:850px) {max-width:700px}
+						@media (max-width:850px) {max-width:700px}
+						@media (max-width:700px) {max-width:550px}
+						@media (max-width:580px) {max-width:400px}
+						@media (max-width:415px) {max-width:300px}
+					}
+				}
+				.main-card__text {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					border-left: 2px solid #14274A;
+					height: 100%;
+					padding:0 70px 0 30px;
+					max-width: 540px;
+					@media (max-width:1150px) {align-items:center;margin:0 0 100px 15px;padding:0 0 0 15px;max-width:80%;}
+					@media (max-width:600px) {margin:0 0 50px 15px;}
+					:not(:last-child){
+						margin:0 0 25px 0;
+					}
+					.main-card__text__title {
+						font-family: adobe-b;
+						font-size: 35px;
+						letter-spacing: 2px;
+						@media (max-width:600px) {font-size:20px;}
+						@media (max-width:400px) {font-size:16px;}
+					}
+					.main-card__text__desc {
+						font-family: Montserrat;
+						font-size: 16px;
+						font-weight: regular;
+						letter-spacing: 1px;
+						line-height: 140%;
+						@media (max-width:600px) {font-size:12px;max-width:450px;}
+						@media (max-width:400px) {max-width:300px;}
+					}
+				}
+			}
+		}
+	}
+}
+
+// -------------------HOMEPAGE----------bg image------------
+
+.main-bg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.main-bg__block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding:0 50px 0 50px;
+	}
+	h2{
+		font-family: Montserrat;
+		color:#fff;
+		font-size: 45px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-align: center;
+		@media (max-width:950px) {font-size:36px;}
+		@media (max-width:400px) {font-size:24px;}
+	}
+	p{
+		text-align: center;
+		max-width: 1100px;
+		font-family: abode-b;
+		color: #fff;
+		font-size: 25px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		line-height: 120%;
+		margin-top:50px;
+		text-align: center;
+		@media (max-width:950px) {font-size:22px;max-width:800px;}
+		@media (max-width:400px) {font-size:20px;max-width:300px;}
+		
+	}
+}
+
+
+
+
+// ======================Facilities=========PAGE slider===========
+
+.facilities-container {
+	position: relative;
+	max-width: 800px;
+	overflow: hidden;
+	@media (min-width:1720px) {max-width:1100px}
+	@media (max-width:850px) {max-width:700px}
+	@media (max-width:700px) {max-width:550px}
+	@media (max-width:580px) {max-width:400px}
+	@media (max-width:415px) {max-width:300px}
+	.facilities-slider {
+		display: flex;
+		max-width: 2400px;
+		transition: 1s ease-out;
+		@media (max-width:850px) {max-width:2100px}
+		@media (max-width:700px) {max-width:1650px}
+		@media (max-width:580px) {max-width:1200px}
+		@media (max-width:415px) {max-width:900px}
+		.facilities-slide {
+			position: relative;
+			max-width: 800px;
+			height: auto;
+			@media (min-width:1720px) {max-width:1100px}
+			@media (max-width:850px) {max-width:700px}
+			@media (max-width:700px) {max-width:550px}
+			@media (max-width:580px) {max-width:400px}
+			@media (max-width:415px) {max-width:300px}
+		}
+	}
+}
+//===============================PAGE ROOMS---------------============
+
+
+.main-rooms {
+	width: 100%;
+	height: 100%;
+}
+
+.main-rooms__block {
+	display: flex;
+	flex-direction: column;
+}
+.maintext-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	:not(:last-child){
+		margin:50px 0 50px 0;
+	}
+}
+.maintext-container__title {
+	font-family: adobe-b;
+	font-size: 45px;
+	letter-spacing: 2px;
+	margin-bottom:15px;
+	@media (max-width:650px) {font-size: 34px;}
+}
+.maintext-container__desc {
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	line-height: 170%;
+	text-align: center;
+	margin-bottom:50px;
+	@media (max-width:450px) {font-size: 16px;}
+}
+
+// ===========slider block
+
+.main-rooms__apart{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items:flex-start;
+	justify-content: space-between;
+	margin:75px 0;
+	background-color: #fafffa;
+	box-shadow: 10px 0px 40px 0.1px $accent;
+	@media (max-width:1240px) {flex-wrap:wrap;justify-content:center;margin:30px 0;}
+	
+}
+.apart-right{
+	display: flex;
+	flex-direction: row-reverse;
+}
+// ----slider rooms and facilities buttons
+
+.slider-container {
+	position: relative;
+	width: 600px;
+	overflow: hidden;
+	@media (max-width:600px) {max-width:450px}
+	@media (max-width:435px) {max-width:350px}
+	.slider {
+		display: flex;
+		width: 1800px;
+		transition: 1s ease-out;
+		@media (max-width:600px) {max-width:1350px}
+		@media (max-width:435px) {max-width:1000px}
+		.slide{
+			position: relative;
+			width:600px;
+			height: auto;
+			@media (max-width:600px) {max-width:450px}
+			@media (max-width:435px) {max-width:350px}
+		}
+	}
+}
+.slider-dots,.facilities-slider-dots {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	position: absolute;
+	bottom:20px;
+	left:20px;
+	@media (max-width:400px) {flex-wrap: wrap;max-width:220px;gap:10px 5px;bottom:10px;left:5px;justify-content:flex-start}
+}
+.slider-dot,.facilities-slider-dot {
+	width: 15px;
+	height: 15px;
+	border: 1.5px solid #fff;
+	background-color: transparent;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.active-dot {
+	border: 1.5px solid $accent;
+	background-color: $accent;
+}
+
+// room card solo
+
+.apart-block__content{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 440px;
+	max-height: 500px;
+	padding:30px 30px;
+	@media (max-width:540px) {align-items: center;}
+
+	:not(:last-child){
+		margin:0 0 25px 0;
+	}
+	img{
+		width:400px;
+		@media (max-width:540px) {max-width:300px}
+	}
+	.apart-content__title {
+		font-family: adobe-b;
+		font-size: 20px;
+		letter-spacing: 1px;
+		@media (max-width:540px) {font-size: 16px;max-width:350px;}
+	}
+	.apart-content__titledesc {
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 500;
+		letter-spacing: 0.5px;
+		text-align: left;
+		@media (max-width:540px) {font-size: 16px;}
+	}
+	.apart-content__button{
+		margin:-100px 0;
+	}
+}
+
+// details room
+
+details{
+	max-height:180px;
+	overflow:scroll;
+}
+details summary::-webkit-details-marker {
+	display:none;
+ }
+.apart-content__details > summary{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	list-style: none;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border: 1px solid $accent;
+	border-radius: 6px;
+	width: 350px;
+	cursor: pointer;
+	@media (max-width:540px) {width:250px;}
+}
+.summary-text{
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	line-height: 170%;
+}
+details[open] > summary {
+	color:#eee; 
+	background-color:$accent;
+	transition: 0.3s;
+}
+summary::before{
+	content: '+';
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $accent;
+	border-radius: 5px;
+	font-size: 30px;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	width:30px;
+	margin-right:10px;
+}
+details[open] summary:before {
+   content: "-";
+	color: $accent;
+	font-size: 30px;
+	background-color: #fff;
+	transition: 0.3s;
+}
+
+
+
+// =============CONTACT====PAGE=============
+
+
+
+
+
+.main-contacts {
+	background-image: url("../images/bgmask.svg"),url("../images/Hotel_general_5.jpeg");
+	min-height: 100vh;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	opacity: 0.9;
+	.main-contacts__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding:100px 0 100px 0;
+		.contacts-title__title {
+			font-family: adobe-b;
+			font-size: 40px;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			margin-bottom:25px;
+			@media (max-width:800px) {font-size: 30px;}
+		}
+		.contacts-title__desc {
+			font-family: Montserrat;
+			font-size: 20px;
+			font-weight: 500;
+			letter-spacing: 0.5px;
+			line-height: 120%;
+			text-align: center;
+			@media (max-width:800px) {font-size: 16px;}
+		}
+	}
+	.main-contacts__contacts {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding:0 0 100px 0;
+		@media (max-width:600px) {flex-wrap: wrap;justify-content: center;align-items:center;}
+		@media (max-width:580px) {padding:0 0 50px 0;gap:50px 0;}
+	}
+	.contacts-links__card {
+		max-width: 500px;
+		@media (max-width:800px) {padding:0 50px 0 0;text-align:center;}
+		@media (max-width:600px) {padding:0 25px 0 0;}
+		@media (max-width:580px) {padding:0;}
+		:not(:last-child){
+			margin:0 0 25px 0;
+		}
+		.contact-card__adress {
+			font-family: Montserrat;
+			font-size: 25px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			@media (max-width:800px) {font-size: 20px;}
+		}
+		.contact-card__map {
+			font-family: adobe-b;
+			font-size: 30px;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			@media (max-width:800px) {font-size: 24px;}
+		}
+		.contact-card__tel,.contact-card__emeil {
+			a{
+				font-family: Montserrat;
+				font-size: 25px;
+				font-weight: 500;
+				letter-spacing: 1px;
+				text-decoration: none;
+				color: #fff;
+				@media (max-width:800px) {font-size: 20px;}
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+	.contact-links__form {
+		@media (max-width:740px) {max-width: 250px;}
+		@media (max-width:650px) {max-width: 180px;}
+		.contact-form__button{
+			float: right;
+		}
+		.contact-form__container{
+			display: flex;
+			flex-direction: column;
+			margin-bottom:25px;
+			.contact-form__name,.contact-form__email,.contact-form__message {
+				font-family: adobe-b;
+				font-size: 18px;
+				font-weight: 500;
+				letter-spacing: 0.5px;
+			}
+			input,textarea{
+				border: 1px solid $accent;
+				border-radius: 5px;
+				padding:10px;
+				font-size: 16px;
+				&:active{
+					outline: #14274A;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
